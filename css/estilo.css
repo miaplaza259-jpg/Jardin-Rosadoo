@@ -1,0 +1,647 @@
+body {
+
+    margin: 0;
+
+    font-family: Arial, sans-serif;
+
+    background-color: #fff8fa;
+
+    color: #5a3a45;
+
+}
+
+
+/* =========================
+   ENCABEZADO
+========================= */
+
+header {
+
+    background: linear-gradient(135deg, #e89aaa, #f7c5d2);
+
+    text-align: center;
+
+    padding: 35px 20px;
+
+}
+
+
+.titulo {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 18px;
+
+}
+
+
+.titulo img {
+
+    width: 75px;
+
+    height: 75px;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    border: 4px solid white;
+
+}
+
+
+.titulo h1 {
+
+    margin: 0;
+
+    font-size: 42px;
+
+    color: white;
+
+    letter-spacing: 1px;
+
+}
+
+
+header p {
+
+    color: white;
+
+    font-size: 18px;
+
+    margin-top: 15px;
+
+}
+
+
+/* =========================
+   MENÚ
+========================= */
+
+nav {
+
+    background-color: white;
+
+    text-align: center;
+
+    padding: 18px;
+
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 10;
+
+}
+
+
+nav a {
+
+    color: #b94f72;
+
+    text-decoration: none;
+
+    margin: 0 18px;
+
+    font-size: 17px;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+
+}
+
+
+nav a:hover {
+
+    color: #e58aa5;
+
+}
+
+
+/* =========================
+   CARRUSEL
+========================= */
+
+.carrusel {
+
+    width: 90%;
+
+    max-width: 1100px;
+
+    margin: 35px auto;
+
+    position: relative;
+
+    overflow: hidden;
+
+}
+
+
+.ventana {
+
+    width: 100%;
+
+    overflow: hidden;
+
+}
+
+
+.tarjetas {
+
+    display: flex;
+
+    gap: 25px;
+
+    transition: transform 0.5s ease;
+
+}
+
+
+.tarjeta {
+
+    width: 280px;
+
+    flex: 0 0 280px;
+
+    background-color: white;
+
+    border-radius: 18px;
+
+    padding: 15px;
+
+    text-align: center;
+
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.10);
+
+}
+
+
+.tarjeta img {
+
+    width: 100%;
+
+    height: 200px;
+
+    object-fit: cover;
+
+    border-radius: 14px;
+
+}
+
+
+.tarjeta h2 {
+
+    color: #c45b7c;
+
+    margin-bottom: 5px;
+
+}
+
+
+.precio {
+
+    color: #5a3a45;
+
+    font-size: 16px;
+
+}
+
+
+/* =========================
+   PRODUCTOS / SERVICIOS
+========================= */
+
+.contenedor {
+
+    width: 90%;
+
+    max-width: 1100px;
+
+    margin: 50px auto;
+
+}
+
+
+.contenedor > h2 {
+
+    text-align: center;
+
+    color: #b94f72;
+
+    font-size: 30px;
+
+    margin-bottom: 35px;
+
+}
+
+
+.productos {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 30px;
+
+    flex-wrap: wrap;
+
+}
+
+
+.producto {
+
+    background-color: white;
+
+    width: 280px;
+
+    padding: 20px;
+
+    text-align: center;
+
+    border-radius: 20px;
+
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.10);
+
+    transition: 0.3s;
+
+}
+
+
+.producto:hover {
+
+    transform: translateY(-7px);
+
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+
+}
+
+
+.producto img {
+
+    width: 100%;
+
+    height: 220px;
+
+    object-fit: cover;
+
+    border-radius: 15px;
+
+}
+
+
+.producto h2 {
+
+    color: #c45b7c;
+
+    margin-bottom: 10px;
+
+}
+
+
+.producto p {
+
+    font-size: 16px;
+
+    line-height: 1.5;
+
+}
+
+
+.producto strong {
+
+    color: #a83e61;
+
+    font-size: 20px;
+
+}
+
+
+/* =========================
+   CONTACTOS
+========================= */
+
+.contacto {
+
+    width: 80%;
+
+    max-width: 700px;
+
+    margin: 50px auto;
+
+    background-color: white;
+
+    padding: 40px;
+
+    text-align: center;
+
+    border-radius: 25px;
+
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+
+}
+
+
+.contacto h2 {
+
+    font-size: 30px;
+
+    color: #c45b7c;
+
+    margin-bottom: 25px;
+
+}
+
+
+.contacto p {
+
+    font-size: 18px;
+
+    margin: 15px;
+
+}
+
+
+.foto-contacto {
+
+    width: 180px;
+
+    height: 180px;
+
+    object-fit: cover;
+
+    display: block;
+
+    margin: 0 auto 25px;
+
+    border-radius: 10px;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+
+}
+
+
+/* =========================
+   REDES SOCIALES
+========================= */
+
+.redes {
+
+    margin-top: 25px;
+
+}
+
+
+.red-social {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    width: 60px;
+
+    height: 60px;
+
+    margin: 10px;
+
+    background-color: #fff0f5;
+
+    border-radius: 50%;
+
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+
+    transition: 0.3s;
+
+}
+
+
+.red-social img {
+
+    width: 40px;
+
+    height: 40px;
+
+    object-fit: contain;
+
+}
+
+
+.red-social:hover {
+
+    transform: scale(1.1);
+
+}
+
+
+/* =========================
+   INDICADORES DEL CARRUSEL
+========================= */
+
+.indicadores {
+
+    width: 100%;
+
+    height: 60px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 10px;
+
+    background-color: white;
+
+    margin: 0;
+
+    padding: 0;
+
+}
+
+
+.indicador {
+
+    width: 30px;
+
+    height: 16px;
+
+    border: 1px solid #777;
+
+    border-radius: 20px;
+
+    background-color: white;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+
+}
+
+
+.indicador.activo {
+
+    background-color: #444;
+
+    border-color: #444;
+
+}
+
+
+/* =========================
+   BARRA ROSADA
+========================= */
+
+.barra-rosada {
+
+    width: 100%;
+
+    height: 8px;
+
+    background-color: #d0527d;
+
+    margin: 0;
+
+    padding: 0;
+
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+
+    background-color: #d0527d;
+
+    color: white;
+
+    padding: 12px 20px;
+
+    font-size: 14px;
+
+    width: 100%;
+
+    box-sizing: border-box;
+
+}
+
+
+.footer-container {
+
+    max-width: 1100px;
+
+    margin: 0 auto;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: 30px;
+
+}
+
+
+.footer-container p {
+
+    margin: 0;
+
+}
+
+
+.footer-container a {
+
+    color: white;
+
+    text-decoration: none;
+
+}
+
+
+.footer-container a:hover {
+
+    text-decoration: underline;
+
+}
+
+
+/* =========================
+   CELULAR
+========================= */
+
+@media (max-width: 700px) {
+
+    .titulo h1 {
+
+        font-size: 30px;
+
+    }
+
+
+    .titulo img {
+
+        width: 55px;
+
+        height: 55px;
+
+    }
+
+
+    nav a {
+
+        display: inline-block;
+
+        margin: 7px;
+
+        font-size: 15px;
+
+    }
+
+
+    .tarjeta {
+
+        width: 280px;
+
+        flex: 0 0 280px;
+
+    }
+
+
+    .producto {
+
+        width: 85%;
+
+    }
+
+
+    .contacto {
+
+        width: 80%;
+
+        padding: 25px;
+
+    }
+
+
+    .footer-container {
+
+        flex-direction: column;
+
+        text-align: center;
+
+    }
+
+}

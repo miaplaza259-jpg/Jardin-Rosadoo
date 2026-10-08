@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Jardín Rosado</title>
+
+    <link rel="icon" type="image/jpeg" href="img/logo.jpg">
+
+    <link rel="stylesheet" href="css/estilo.css">
+
+</head>
+
+<body>
+
+    <header>
+
+        <div class="titulo">
+
+            <img src="img/logo.jpg" alt="Logo de flores">
+
+            <h1>Jardín Rosado</h1>
+
+        </div>
+
+        <p>Flores que llenan de color tus momentos especiales 🌷</p>
+
+    </header>
+
+
+    <nav>
+
+        <a href="index.html">Inicio</a>
+
+        <a href="paginas/contactos.html">Contactos</a>
+
+        <a href="paginas/servicios.html">Servicios</a>
+
+    </nav>
+
+
+    <!-- CARRUSEL -->
+
+    <div class="carrusel">
+
+        <div class="ventana">
+
+            <div class="tarjetas" id="tarjetas">
+
+                <div class="tarjeta">
+
+                    <img src="img/tulipanes.jpg" alt="Tulipanes">
+
+                    <h2>Tulipanes</h2>
+
+                    <p class="precio">$12.00</p>
+
+                </div>
+
+
+                <div class="tarjeta">
+
+                    <img src="img/tuli.jpg" alt="Tulipán">
+
+                    <h2>Tulipán</h2>
+
+                    <p class="precio">$14.00</p>
+
+                </div>
+
+
+                <div class="tarjeta">
+
+                    <img src="img/gira.jpg" alt="Girasol">
+
+                    <h2>Girasol</h2>
+
+                    <p class="precio">$10.00</p>
+
+                </div>
+
+
+                <div class="tarjeta">
+
+                    <img src="img/flor.jpg" alt="Flores">
+
+                    <h2>Flores</h2>
+
+                    <p class="precio">$9.00</p>
+
+                </div>
+
+
+                <div class="tarjeta">
+
+                    <img src="img/rosas.jpg" alt="Rosas">
+
+                    <h2>Rosas</h2>
+
+                    <p class="precio">$15.00</p>
+
+                </div>
+
+
+                <div class="tarjeta">
+
+                    <img src="img/lirios.jpg" alt="Lirios">
+
+                    <h2>Lirios</h2>
+
+                    <p class="precio">$13.00</p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- INDICADORES -->
+
+    <div class="indicadores">
+
+        <span class="indicador activo"></span>
+
+        <span class="indicador"></span>
+
+        <span class="indicador"></span>
+
+        <span class="indicador"></span>
+
+        <span class="indicador"></span>
+
+        <span class="indicador"></span>
+
+    </div>
+
+
+    <!-- BARRA ROSADA -->
+
+    <div class="barra-rosada"></div>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <div class="footer-container">
+
+            <p>
+                &copy; 2026 Jardín Rosado - Todos los derechos reservados.
+            </p>
+
+            <p>
+                📍 Guayaquil |
+                📞 +593 000 000 000 |
+                ✉️ info@jardinrosado.com
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script>
+
+        const tarjetas = document.getElementById("tarjetas");
+
+        const indicadores = document.querySelectorAll(".indicador");
+
+        let indice = 0;
+
+
+        function mostrarFlor() {
+
+            const ancho = tarjetas.children[0].offsetWidth + 25;
+
+            tarjetas.style.transform =
+                `translateX(-${indice * ancho}px)`;
+
+
+            indicadores.forEach((indicador, i) => {
+
+                indicador.classList.remove("activo");
+
+                if (i === indice) {
+
+                    indicador.classList.add("activo");
+
+                }
+
+            });
+
+        }
+
+
+        indicadores.forEach((indicador, i) => {
+
+            indicador.addEventListener("click", function() {
+
+                indice = i;
+
+                mostrarFlor();
+
+            });
+
+        });
+
+
+        window.addEventListener("resize", mostrarFlor);
+
+        mostrarFlor();
+
+    </script>
+
+</body>
+
+</html>
